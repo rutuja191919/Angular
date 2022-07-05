@@ -1,0 +1,31 @@
+<h1>Demonstration of Inbuilt Pipes</h1>
+
+<h1>{{name}}</h1>
+<h1>{{name | lowercase}}</h1>
+<h1>{{name | uppercase}}</h1>
+<h1>{{name | titlecase}}</h1>
+<h1>{{name | slice : 8}}</h1>
+<h1>{{name | slice : 5 : 9}}</h1>
+
+<h1>{{batches | json}}</h1>
+<h1>{{today}}</h1>
+<h1>{{today | date : 'short'}}</h1>
+<h1>{{today | date : 'shortDate'}}</h1>
+<h1>{{today | date : 'shortTime'}}</h1>
+
+<h1>{{no}}</h1>
+<h1>{{no | number : '1.2-3'}}</h1>
+<h1>{{no | number : '3.4-5'}}</h1>
+<h1>{{no | number : '3.1-2'}}</h1>
+
+<h1>{{fees}}</h1>
+<h1>{{fees | currency}}</h1>
+<h1>{{fees | currency : 'INR'}}</h1>
+<h1>{{fees | currency : 'AED'}}</h1>
+<h1>{{fees | currency : 'BR'}}</h1>
+
+<h1>{{"Marvellous Pune" | demo : "PPA" : "Python" : "Angular"}}</h1> 
+
+<h1>Marvellous Infosystems : Educating for better tomorrow</h1>
+
+<h1 appHello>Marvellous Infosystems : Educating for better tomorrow</h1>
