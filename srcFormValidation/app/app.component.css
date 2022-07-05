@@ -1,0 +1,10 @@
+.control-label:after {
+      content: " *";
+      color: red;
+      font-weight: 100;
+  }
+
+  .btn-primary
+  {
+    background-color: #800080;
+  }
