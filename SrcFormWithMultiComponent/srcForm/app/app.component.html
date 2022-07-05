@@ -1,0 +1,30 @@
+<div [hidden]="submitted">
+<app-header></app-header><br>
+<form [formGroup] = "form">
+
+<app-personal-info (formReady)="addChildForm('personal', $event)"></app-personal-info>
+
+<app-bug-info (formReady)="addChildForm('bugdetails', $event)"></app-bug-info>
+
+<app-footer (onHit) = "catchChildEvent($event)" ></app-footer>
+
+{{form.value | json}}
+</form><br>
+</div>
+
+<div [hidden]="!submitted">
+<h2>Submitted data is:</h2>
+<div class="row">
+  <div class="col-xs-3">First Name : {{ firstname }}</div>
+  <div class="col-xs-3">Last Name : {{ lastname }}</div>
+  <div class="col-xs-3">Email : {{ email }}</div>
+  <div class="col-xs-3">Date : {{ year }}-{{ month }}-{{ day }}</div>
+  <div class="col-xs-3">Time : {{ time }}</div>
+  <div class="col-xs-3">Impact : {{ impact }}</div>
+  <div class="col-xs-3">Explaination : {{ explaination }}</div>
+</div>
+<br>
+</div>
+
+
+<router-outlet></router-outlet>

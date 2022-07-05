@@ -1,0 +1,37 @@
+<div class = "container-fluid">
+
+<form [formGroup] = "BugInfoForm">
+<label>Date and time you first noticed this bug*</label><br>
+   
+<div class="col-6">
+  <div class="input-group">
+    <input class="form-control" placeholder="yyyy-mm-dd"
+           name="dp" ngbDatepicker #d="ngbDatepicker" formControlName="bugdate" >
+    <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"></button>
+  </div>
+</div><br>
+
+
+<div class="row">
+  <div class="col-sm-1">
+      <input id="changeHourStep" type="number" class="form-control form-control-sm" min = "0" max = "12" formControlName="bughours" />
+  </div>:
+  <div class="col-sm-1">
+      <input id="changeMinuteStep" type="number" class="form-control form-control-sm" min = "0" max = "60" formControlName="bugminutes" />
+  </div>
+  <div class="col-sm-1">
+      <input id="changeSecondStep" type="number" class="form-control form-control-sm" min = "0" max = "3600" formControlName="bugseconds" />
+  </div>
+</div><br>
+
+<label>Impact</label><br>
+<select class = "form-control" formControlName="bugimpact">
+  <option *ngFor="let temp of impact">
+   {{ temp }}
+  </option>
+</select> <br>
+   
+    <label>Detailed Explaination of Bug *</label>
+    <textarea type="text" class="form-control" formControlName="details"></textarea>
+</form>
+</div>
