@@ -1,0 +1,13 @@
+<h1>Inside App Component</h1>
+--------------------------------------------------------------------------------------------
+<h2>Two Way Binding using template reference variable</h2>
+
+<br><input #Mydata type = "text">
+<button (click) = "Send(Mydata.value)">Send Data</button>
+<h1>Data entered in textarea is : {{value}}</h1>
+
+--------------------------------------------------------------------------------------------
+<h2>Two Way Binding in sync using ngModel(banana in the box)</h2>
+<h1>Enter your name :</h1>
+<input [(ngModel)] = "Name" type = "text">
+<h1>Your name is : {{Name}}</h1>
