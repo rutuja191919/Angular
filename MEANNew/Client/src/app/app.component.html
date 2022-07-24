@@ -1,0 +1,25 @@
+<h1> Welcome to MEAN stack application </h1>
+
+<h3>* Addition of new batch</h3>
+Enter Batchname :  <input #Batchname type = "text"><br><br>
+Enter Duration  :  <input #Duration type = "text"><br><br>
+<button (click) = "Send(Batchname.value,Duration.value)">Add New Batch</button>
+
+<h3>* Delete and get batch by ID</h3>
+Enter Id : <input #id type = "text"><br><br>
+<button (click) = "Delete(id.value)">Delete Batch</button>
+<button (click) = "GetSpecific(id.value)">Get Batch Details</button><br><br>
+
+<h3>* Update batch</h3>
+Enter Id : <input #Id type = "text"><br><br>
+Enter Batchname :  <input #newbatchname type = "text"><br><br>
+Enter Duration  :  <input #newduration type = "text"><br><br>
+<button (click) = "Update(Id.value,newbatchname.value,newduration.value)">Update Batch</button><br><br>
+
+<h3>*Get all batches details : <button (click) = "Get()">Get Details</button></h3>
+
+<!--<h1>Sent data is : {{batchname}} && {{batchduration}}</h1>-->
+<br><br>{{results}}
+
+
+
